@@ -22,11 +22,11 @@ To facilitate class-level code translation across different LLMs, this project i
 - **NVIDIA Invocation Script**: The `nvidia_invoke.py` file provides a script to call NVIDIA's LLM with the translation task prompt.
 - **Baidu Qianfan Invocation Script**: The `baidu_qianfan_invoke.py` file contains a script to call the Baidu Qianfan model with a prompt suited for class-level code translation.
 
-we design a most basic prompt to fit the above three strategies and mimic the easiest and most prevalent usage in practice, which can be formally defined as: 
+We design a most basic prompt to fit the above three strategies and mimic the easiest and most prevalent usage in practice, which can be formally defined as: 
 
-“Translate the following ${𝑝𝑙𝑠𝑟𝑐 } code to ${𝑝𝑙𝑑𝑠𝑡}:\n\n${𝑝𝑟𝑜𝑔𝑠𝑟𝑐 }”
+“Translate the following ${𝑝𝑙𝑠𝑟𝑐} code to ${𝑝𝑙𝑑𝑠𝑡}:\n\n${𝑝𝑟𝑜𝑔𝑠𝑟𝑐 }”
 
-where ${𝑝𝑙𝑠𝑟𝑐 }, ${𝑝𝑙𝑑𝑠𝑡}, and ${𝑝𝑟𝑜𝑔𝑠𝑟𝑐 } are placeholders for the source PL (e.g., Python, Java, and Python), target PL, and a program written in a certain source PL.
+where ${𝑝𝑙𝑠𝑟𝑐}, ${𝑝𝑙𝑑𝑠𝑡}, and ${𝑝𝑟𝑜𝑔𝑠𝑟𝑐} are placeholders for the source PL (e.g., Python, Java, and Python), target PL, and a program written in a certain source PL.
 
 
 ## Environmental Requirements
