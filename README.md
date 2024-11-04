@@ -29,7 +29,8 @@ We design a most basic prompt to fit the above three strategies and mimic the ea
 where ${𝑝𝑙𝑠𝑟𝑐}, ${𝑝𝑙𝑑𝑠𝑡}, and ${𝑝𝑟𝑜𝑔𝑠𝑟𝑐} are placeholders for the source PL (e.g., Python, Java, and Python), target PL, and a program written in a certain source PL.
 
 Using Python ——> C++ translation as an example, we show concrete prompt examples for three different strategies：
-![a9fcbc1b8384e78ffbbb8537d16bdfa](https://github.com/user-attachments/assets/a00979d9-208f-4240-9a6d-fc6f82a20916)
+![681c927fe3f545b05c59e7932a64cf7](https://github.com/user-attachments/assets/af83c4e5-98a4-4b59-b4d1-2a96c6715f43)
+
 
 
 ## Environmental Requirements
