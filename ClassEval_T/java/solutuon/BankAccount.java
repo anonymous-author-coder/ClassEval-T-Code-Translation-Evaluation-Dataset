@@ -1,13 +1,13 @@
 package org.example;
 
-public class Bank_Account_System {
+public class BankAccount {
     private int balance;
 
-    public Bank_Account_System(int balance) {
+    public BankAccount(int balance) {
         this.balance = balance;
     }
 
-    public Bank_Account_System() {
+    public BankAccount() {
         this(0);
     }
 
