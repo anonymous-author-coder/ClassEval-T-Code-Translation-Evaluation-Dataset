@@ -10,32 +10,32 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Class_Registration_SystemTest {
+public class ClassRegistrationSystemTest {
 
-    private Class_Registration_System registrationSystem;
+    private ClassRegistrationSystem registrationSystem;
 
     @BeforeEach
     void setUp() {
-        registrationSystem = new Class_Registration_System();
+        registrationSystem = new ClassRegistrationSystem();
     }
 
     @Test
     void testRegisterStudent() {
-        Class_Registration_System.Student student = new Class_Registration_System.Student("John", "Computer Science");
+        ClassRegistrationSystem.Student student = new ClassRegistrationSystem.Student("John", "Computer Science");
         assertEquals(1, registrationSystem.registerStudent(student));
     }
 
     @Test
     void testRegisterStudent2() {
-        Class_Registration_System.Student student = new Class_Registration_System.Student("John", "Computer Science");
+        ClassRegistrationSystem.Student student = new ClassRegistrationSystem.Student("John", "Computer Science");
         registrationSystem.registerStudent(student);
         assertEquals(0, registrationSystem.registerStudent(student));
     }
 
     @Test
     void testRegisterStudent3() {
-        Class_Registration_System.Student student1 = new Class_Registration_System.Student("John", "Computer Science");
-        Class_Registration_System.Student student2 = new Class_Registration_System.Student("Alice", "Mathematics");
+        ClassRegistrationSystem.Student student1 = new ClassRegistrationSystem.Student("John", "Computer Science");
+        ClassRegistrationSystem.Student student2 = new ClassRegistrationSystem.Student("Alice", "Mathematics");
         assertEquals(1, registrationSystem.registerStudent(student1));
         assertEquals(1, registrationSystem.registerStudent(student2));
         assertEquals(0, registrationSystem.registerStudent(student2));
@@ -43,7 +43,7 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testRegisterClass() {
-        registrationSystem.registerStudent(new Class_Registration_System.Student("John", "Computer Science"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("John", "Computer Science"));
         List<String> result = registrationSystem.registerClass("John", "CS101");
         List<String> expected = new ArrayList<>();
         expected.add("CS101");
@@ -52,7 +52,7 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testRegisterClass2() {
-        registrationSystem.registerStudent(new Class_Registration_System.Student("John", "Computer Science"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("John", "Computer Science"));
         registrationSystem.registerClass("John", "CS101");
         registrationSystem.registerClass("John", "CS102");
         List<String> result = registrationSystem.registerClass("John", "CS103");
@@ -65,8 +65,8 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testRegisterClass3() {
-        registrationSystem.registerStudent(new Class_Registration_System.Student("John", "Computer Science"));
-        registrationSystem.registerStudent(new Class_Registration_System.Student("Tom", "Mathematics"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("Tom", "Mathematics"));
         registrationSystem.registerClass("John", "CS101");
         registrationSystem.registerClass("Tom", "CS102");
         List<String> result = registrationSystem.registerClass("John", "CS103");
@@ -78,9 +78,9 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetStudentsByMajor() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
         registrationSystem.setStudents(students);
 
         List<String> csStudents = registrationSystem.getStudentsByMajor("Computer Science");
@@ -93,9 +93,9 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetStudentsByMajor2() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
         registrationSystem.setStudents(students);
 
         List<String> csStudents = registrationSystem.getStudentsByMajor("Computer Science");
@@ -112,10 +112,10 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetStudentsByMajor3() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Alice", "Mathematics"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Alice", "Mathematics"));
         registrationSystem.setStudents(students);
 
         List<String> csStudents = registrationSystem.getStudentsByMajor("Computer Science");
@@ -133,12 +133,12 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetStudentsByMajor4() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Alice", "Mathematics"));
-        students.add(new Class_Registration_System.Student("Tom", "Mathematics"));
-        students.add(new Class_Registration_System.Student("Jerry", "Mathematics"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Alice", "Mathematics"));
+        students.add(new ClassRegistrationSystem.Student("Tom", "Mathematics"));
+        students.add(new ClassRegistrationSystem.Student("Jerry", "Mathematics"));
         registrationSystem.setStudents(students);
 
         List<String> csStudents = registrationSystem.getStudentsByMajor("Computer Science");
@@ -158,9 +158,9 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetAllMajor() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
         registrationSystem.setStudents(students);
 
         List<String> majors = registrationSystem.getAllMajor();
@@ -172,10 +172,10 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetAllMajor2() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Alice", "Mathematics"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Alice", "Mathematics"));
         registrationSystem.setStudents(students);
 
         List<String> majors = registrationSystem.getAllMajor();
@@ -188,12 +188,12 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetAllMajor3() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Alice", "Mathematics"));
-        students.add(new Class_Registration_System.Student("Tom", "Mathematics"));
-        students.add(new Class_Registration_System.Student("Jerry", "Physics"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Alice", "Mathematics"));
+        students.add(new ClassRegistrationSystem.Student("Tom", "Mathematics"));
+        students.add(new ClassRegistrationSystem.Student("Jerry", "Physics"));
         registrationSystem.setStudents(students);
 
         List<String> majors = registrationSystem.getAllMajor();
@@ -207,10 +207,10 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetMostPopularClassInMajor() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Alice", "Computer Science"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Alice", "Computer Science"));
         registrationSystem.setStudents(students);
 
         Map<String, List<String>> studentClasses = new HashMap<>();
@@ -225,12 +225,12 @@ public class Class_Registration_SystemTest {
 
     @Test
     void testGetMostPopularClassInMajor2() {
-        List<Class_Registration_System.Student> students = new ArrayList<>();
-        students.add(new Class_Registration_System.Student("John", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Bob", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Alice", "Computer Science"));
-        students.add(new Class_Registration_System.Student("Tom", "Mathematics"));
-        students.add(new Class_Registration_System.Student("Jerry", "Mathematics"));
+        List<ClassRegistrationSystem.Student> students = new ArrayList<>();
+        students.add(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Alice", "Computer Science"));
+        students.add(new ClassRegistrationSystem.Student("Tom", "Mathematics"));
+        students.add(new ClassRegistrationSystem.Student("Jerry", "Mathematics"));
         registrationSystem.setStudents(students);
 
         Map<String, List<String>> studentClasses = new HashMap<>();
@@ -249,10 +249,10 @@ public class Class_Registration_SystemTest {
 
     @Test
     void test() {
-        registrationSystem.registerStudent(new Class_Registration_System.Student("John", "Computer Science"));
-        registrationSystem.registerStudent(new Class_Registration_System.Student("Bob", "Computer Science"));
-        registrationSystem.registerStudent(new Class_Registration_System.Student("Alice", "Mathematics"));
-        registrationSystem.registerStudent(new Class_Registration_System.Student("Tom", "Mathematics"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("John", "Computer Science"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("Bob", "Computer Science"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("Alice", "Mathematics"));
+        registrationSystem.registerStudent(new ClassRegistrationSystem.Student("Tom", "Mathematics"));
         registrationSystem.registerClass("John", "Algorithms");
         registrationSystem.registerClass("John", "Data Structures");
         registrationSystem.registerClass("Bob", "Operating Systems");
