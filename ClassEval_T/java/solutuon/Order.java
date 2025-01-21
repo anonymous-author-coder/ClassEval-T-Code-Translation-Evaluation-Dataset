@@ -5,12 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class OrderManagement {
+public class Order {
     List<Map<String, Object>> menu;
     List<Map<String, Object>> selectedDishes;
     Map<String, Double> sales;
 
-    public OrderManagement() {
+    public Order() {
         this.menu = new ArrayList<>();
         this.selectedDishes = new ArrayList<>();
         this.sales = new HashMap<>();
