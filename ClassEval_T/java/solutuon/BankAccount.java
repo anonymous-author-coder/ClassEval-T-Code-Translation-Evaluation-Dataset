@@ -34,14 +34,14 @@ public class BankAccount {
         return this.balance;
     }
 
-    public void transfer(Bank_Account_System otherAccount, int amount) {
+    public void transfer(BankAccount otherAccount, int amount) {
         this.withdraw(amount);
         otherAccount.deposit(amount);
     }
 
     public static void main(String[] args) {
-        Bank_Account_System account1 = new Bank_Account_System();
-        Bank_Account_System account2 = new Bank_Account_System();
+        BankAccount account1 = new BankAccount();
+        BankAccount account2 = new BankAccount();
         account1.deposit(1000);
         account1.transfer(account2, 300);
         System.out.println("account1.balance = " + account1.viewBalance());
