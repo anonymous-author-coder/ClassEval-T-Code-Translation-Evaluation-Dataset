@@ -2,11 +2,11 @@ package org.example;
 
 import java.util.*;
 
-public class Class_Registration_System {
+public class ClassRegistrationSystem {
     private List<Student> students;
     private Map<String, List<String>> studentsRegistrationClasses;
 
-    public Class_Registration_System() {
+    public ClassRegistrationSystem() {
         this.students = new ArrayList<>();
         this.studentsRegistrationClasses = new HashMap<>();
     }
