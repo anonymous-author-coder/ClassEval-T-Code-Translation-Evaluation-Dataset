@@ -6,13 +6,13 @@ import java.sql.*;
 import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DatabaseOperationTest {
+public class DatabaseProcessorTest {
     private static final String DATABASE_NAME = "test.db";
-    private DatabaseOperation processor;
+    private DatabaseProcessor processor;
 
     @BeforeEach
     void setUp() {
-        processor = new DatabaseOperation(DATABASE_NAME);
+        processor = new DatabaseProcessor(DATABASE_NAME);
     }
 
     @AfterEach
