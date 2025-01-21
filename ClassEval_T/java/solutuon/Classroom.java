@@ -6,11 +6,11 @@ import java.util.List;
 
 
 
-public class ClassroomManagement {
+public class Classroom {
     private int id;
     List<ClassroomManagementTest.Course> courses;
 
-    public ClassroomManagement(int id) {
+    public Classroom(int id) {
         this.id = id;
         this.courses = new ArrayList<>();
     }
