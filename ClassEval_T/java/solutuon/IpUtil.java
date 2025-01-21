@@ -3,7 +3,7 @@ package org.example;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-public class IPUtil {
+public class IpUtil {
 
     public static boolean isValidIpv4(String ipAddress) {
         try {
