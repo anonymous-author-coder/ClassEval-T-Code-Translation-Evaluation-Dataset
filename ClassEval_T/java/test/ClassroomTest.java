@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 import java.time.LocalTime;
 import java.util.Objects;
 
-class ClassroomManagementTest {
+class ClassroomTest {
     static class Course {
         String name;
         LocalTime startTime;
@@ -41,7 +41,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testAddCourse1() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         assertTrue(classroom.courses.contains(course));
@@ -49,7 +49,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testAddCourse2() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("Chinese", "10:00", "11:00");
         classroom.addCourse(course);
         assertTrue(classroom.courses.contains(course));
@@ -57,7 +57,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testAddCourse3() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("English", "11:00", "12:00");
         classroom.addCourse(course);
         assertTrue(classroom.courses.contains(course));
@@ -65,7 +65,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testAddCourse4() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("Art", "14:00", "15:00");
         classroom.addCourse(course);
         assertTrue(classroom.courses.contains(course));
@@ -73,7 +73,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testAddCourse5() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("P.E.", "15:00", "16:00");
         classroom.addCourse(course);
         assertTrue(classroom.courses.contains(course));
@@ -81,7 +81,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testAddCourse6() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         classroom.addCourse(course);
@@ -91,7 +91,7 @@ class ClassroomManagementTest {
     // Tests for removing courses
     @Test
     public void testRemoveCourse1() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         classroom.removeCourse(course);
@@ -100,7 +100,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testRemoveCourse2() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("Chinese", "10:00", "11:00");
         classroom.addCourse(course);
         classroom.removeCourse(course);
@@ -109,7 +109,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testRemoveCourse3() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("English", "11:00", "12:00");
         classroom.addCourse(course);
         classroom.removeCourse(course);
@@ -118,7 +118,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testRemoveCourse4() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("Art", "14:00", "15:00");
         classroom.addCourse(course);
         classroom.removeCourse(course);
@@ -127,7 +127,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testRemoveCourse5() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("P.E.", "15:00", "16:00");
         classroom.addCourse(course);
         classroom.removeCourse(course);
@@ -136,7 +136,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testRemoveCourse6() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.removeCourse(course);
         assertFalse(classroom.courses.contains(course));
@@ -145,7 +145,7 @@ class ClassroomManagementTest {
     // Tests for checking availability
     @Test
     public void testIsFreeAt1() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         String checkTime = "11:00";
@@ -155,7 +155,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testIsFreeAt2() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         String checkTime = "09:30";
@@ -165,7 +165,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testIsFreeAt3() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         String checkTime = "12:00";
@@ -175,7 +175,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testIsFreeAt4() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         String checkTime = "14:00";
@@ -185,7 +185,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testIsFreeAt5() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         String checkTime = "09:40";
@@ -196,7 +196,7 @@ class ClassroomManagementTest {
     // Tests for checking course conflicts
     @Test
     public void testCheckCourseConflict1() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course existingCourse = new Course("math", "09:00", "10:00");
         classroom.addCourse(existingCourse);
         Course newCourse = new Course("SE", "10:30", "11:30");
@@ -206,7 +206,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testCheckCourseConflict2() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course existingCourse = new Course("math", "09:00", "10:00");
         classroom.addCourse(existingCourse);
         Course newCourse = new Course("SE", "09:30", "10:30");
@@ -216,7 +216,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testCheckCourseConflict3() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course existingCourse = new Course("math", "09:00", "10:00");
         classroom.addCourse(existingCourse);
         Course newCourse = new Course("SE", "10:00", "11:30");
@@ -226,7 +226,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testCheckCourseConflict4() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course existingCourse = new Course("math", "09:00", "10:00");
         classroom.addCourse(existingCourse);
         Course newCourse = new Course("SE", "09:40", "10:40");
@@ -236,7 +236,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testCheckCourseConflict5() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course existingCourse = new Course("math", "09:00", "10:00");
         classroom.addCourse(existingCourse);
         Course newCourse = new Course("SE", "14:30", "15:30");
@@ -246,7 +246,7 @@ class ClassroomManagementTest {
 
     @Test
     public void testCheckCourseConflict6() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course existingCourse = new Course("math", "09:00", "10:00");
         classroom.addCourse(existingCourse);
         Course newCourse = new Course("SE", "08:30", "09:30");
@@ -257,7 +257,7 @@ class ClassroomManagementTest {
     // Test for main scenario
     @Test
     public void testMain() {
-        ClassroomManagement classroom = new ClassroomManagement(1);
+        Classroom classroom = new Classroom(1);
         Course course = new Course("math", "09:00", "10:00");
         classroom.addCourse(course);
         assertTrue(classroom.courses.contains(course));
