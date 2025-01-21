@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class VectorCalculator {
+public class VectorUtil {
 
     public static double similarity(double[] vector1, double[] vector2) {
         double dotProduct = 0.0;
