@@ -3,7 +3,7 @@ package org.example;
 import java.sql.*;
 import java.util.*;
 
-public class DatabaseOperation {
+public class DatabaseProcessor {
     private String databaseName;
 
     static {
@@ -14,7 +14,7 @@ public class DatabaseOperation {
         }
     }
 
-    public DatabaseOperation(String databaseName) {
+    public DatabaseProcessor(String databaseName) {
         this.databaseName = databaseName;
     }
 
