@@ -55,6 +55,7 @@ main_folder = "path_main"  # Replace with your main folder path
 out_folder = "path_out"
 ```
 Additionally, we further validated the impact of context window limitations by tokenizing all input programs and their expected output programs (where the expected output refers to the ground truth sample in the target language, as the optimal output for LLMs is the target language's ground truth sample). The detailed results can be found in Table A.
+
 ![91bfa068379980d00ecb418fee55284](https://github.com/user-attachments/assets/0497c01a-4b74-4b77-b886-bcfbf3891ad7)
 
 ### RQ3 (Dependency Awareness): To what extent can LLMs translate code dependent on other contexts in class-level code translation? 
