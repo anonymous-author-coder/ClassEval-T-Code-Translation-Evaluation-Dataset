@@ -57,7 +57,7 @@ out_folder = "path_out"
 Additionally, we further validated the impact of context window limitations by tokenizing all input programs and their expected output programs (where the expected output refers to the ground truth sample in the target language, as the optimal output for LLMs is the target language's ground truth sample). The detailed results can be found in Table A.
 
 <p align="center">
-  <img src="![91bfa068379980d00ecb418fee55284](https://github.com/user-attachments/assets/0497c01a-4b74-4b77-b886-bcfbf3891ad7)" alt="Image" />
+  ![91bfa068379980d00ecb418fee55284](https://github.com/user-attachments/assets/0497c01a-4b74-4b77-b886-bcfbf3891ad7)
 </p>
 
 
